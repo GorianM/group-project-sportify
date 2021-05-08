@@ -81,13 +81,13 @@ public class GridListAdapter extends BaseAdapter
                 textView.setMinLines(2);
             }
 
-            if( i == 0) {
-                textView.setBackgroundColor(Color.CYAN);
-            } else if ( i == 1) {
-                textView.setBackgroundColor(Color.MAGENTA);
-            } else if ( i == 2) {
-                textView.setBackgroundColor(Color.YELLOW);
-            }
+//            if( i == 0) {
+//                textView.setBackgroundColor(Color.CYAN);
+//            } else if ( i == 1) {
+//                textView.setBackgroundColor(Color.MAGENTA);
+//            } else if ( i == 2) {
+//                textView.setBackgroundColor(Color.YELLOW);
+//            }
 
 
             textView.setText(data.get( position ).get( i ));
