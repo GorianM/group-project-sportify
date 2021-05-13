@@ -1,6 +1,6 @@
 package edu.dipae.sportify.models;
 
-class AthleteResults
+public class AthleteResults
 {
     private int athleteId;
     private double athleteScore;

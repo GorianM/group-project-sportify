@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ins_form_row_1">25</integer>
+    <integer name="ins_form_row_2">55</integer>
+    <integer name="ins_form_row_3">20</integer>
+</resources>

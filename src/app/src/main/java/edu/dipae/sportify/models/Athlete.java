@@ -8,20 +8,20 @@ public class Athlete
     private String city;
     private String country;
     private int sportId;
-    private char gender;
+    private char sex;
     private int yearOfBirth;
 
     public Athlete() {
     }
 
-    public Athlete(int id, String firstName, String lastName, String city, String country, int sportId, char gender, int yearOfBirth) {
+    public Athlete(int id, String firstName, String lastName, String city, String country, int sportId, char sex, int yearOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
         this.country = country;
         this.sportId = sportId;
-        this.gender = gender;
+        this.sex = sex;
         this.yearOfBirth = yearOfBirth;
     }
 
@@ -73,12 +73,12 @@ public class Athlete
         this.sportId = sportId;
     }
 
-    public char getGender() {
-        return gender;
+    public char getSex() {
+        return sex;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
+    public void setSex(char sex) {
+        this.sex = sex;
     }
 
     public int getYearOfBirth() {
@@ -98,7 +98,7 @@ public class Athlete
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
                 ", sportId=" + sportId +
-                ", gender=" + gender +
+                ", sex=" + sex +
                 ", yearOfBirth=" + yearOfBirth +
                 '}';
     }

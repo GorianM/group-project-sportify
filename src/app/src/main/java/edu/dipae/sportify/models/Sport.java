@@ -7,7 +7,7 @@ public class Sport
     private String name;
     private boolean teamSport;
     private int participants;
-    private char gender;
+    private char sex;
 
     public Sport() {
     }
@@ -17,7 +17,7 @@ public class Sport
         this.name = name;
         this.teamSport = teamSport;
         this.participants = participants;
-        this.gender = gender;
+        this.sex = sex;
     }
 
     public int getId() {
@@ -52,12 +52,12 @@ public class Sport
         this.participants = participants;
     }
 
-    public char getGender() {
-        return gender;
+    public char getSex() {
+        return sex;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
+    public void setSex(char gender) {
+        this.sex = sex;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class Sport
                 ", name='" + name + '\'' +
                 ", teamSport=" + teamSport +
                 ", participants=" + participants +
-                ", gender=" + gender +
+                ", sex=" + sex +
                 '}';
     }
 }

@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="edu.dipae.sportify.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_insertMatchFragment"
+            app:destination="@id/insertMatchFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,5 +26,10 @@
         android:name="edu.dipae.sportify.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/insertMatchFragment"
+        android:name="edu.dipae.sportify.ui.insertmatch.InsertMatchFragment"
+        android:label="fragment_insert_match"
+        tools:layout="@layout/fragment_insert_match" />
 
 </navigation>

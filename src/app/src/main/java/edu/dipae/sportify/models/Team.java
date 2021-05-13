@@ -8,7 +8,7 @@ public class Team
     private String city;
     private String country;
     private int sportId;
-    private char gender;
+    private char sex;
     private int yearOfFounding;
 
     public Team() {
@@ -21,7 +21,7 @@ public class Team
         this.city = city;
         this.country = country;
         this.sportId = sportId;
-        this.gender = gender;
+        this.sex = sex;
         this.yearOfFounding = yearOfFounding;
     }
 
@@ -73,12 +73,12 @@ public class Team
         this.sportId = sportId;
     }
 
-    public char getGender() {
-        return gender;
+    public char getSex() {
+        return sex;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
+    public void setSex(char sex) {
+        this.sex = sex;
     }
 
     public int getYearOfFounding() {
@@ -98,7 +98,7 @@ public class Team
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
                 ", sportId=" + sportId +
-                ", gender=" + gender +
+                ", sex=" + sex +
                 ", yearOfFounding=" + yearOfFounding +
                 '}';
     }

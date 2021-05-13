@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -21,6 +22,7 @@ import java.util.Arrays;
 
 import edu.dipae.sportify.R;
 import edu.dipae.sportify.adapters.GridListAdapter;
+import edu.dipae.sportify.ui.insertmatch.InsertMatchFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -41,6 +43,21 @@ public class HomeFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_nav_home_to_insertMatchFragment);
+//                Fragment fragment = new InsertMatchFragment();
+//                getActivity()
+//                        .getSupportFragmentManager()
+//                        .beginTransaction()
+////                        .setCustomAnimations(
+////                                R.anim.slide_in,  // enter
+////                                R.anim.fade_out,  // exit
+////                                R.anim.fade_in,   // popEnter
+////                                R.anim.slide_out  // popExit
+////                        )
+//                        .replace(R.id., fragment)
+//                        .addToBackStack(null)
+//                        .commit();
 
             }
         });
