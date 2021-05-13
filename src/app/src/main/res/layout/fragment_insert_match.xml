@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableLayout android:gravity=""
+        <TableLayout android:id="@+id/table_layout_insert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -22,23 +22,27 @@
                     android:text="Sport:"
                     android:layout_weight="@integer/ins_form_row_1"/>
 
-                <EditText android:id="@+id/edt_match_sport"
+                <Spinner android:id="@+id/sel_match_sport"
+                    android:layout_weight="@integer/ins_form_row_2"
                     android:layout_width="0dp"
-                    android:layout_weight="@integer/ins_form_row_2"/>
+                    android:spinnerMode="dropdown"/>
+<!--                <EditText android:id="@+id/edt_match_sport"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="@integer/ins_form_row_2"/>-->
 
-                <LinearLayout android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="@integer/ins_form_row_3"
-                    android:gravity="center">
+<!--                <LinearLayout android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="@integer/ins_form_row_3"-->
+<!--                    android:gravity="center">-->
 
-                    <ImageButton android:src="@drawable/search"
-                        android:layout_height="match_parent"
-                        android:layout_width="wrap_content"
-                        android:paddingHorizontal="10dp"
-                        android:background="@color/green_panton"
-                        android:tint="@color/white">
-                    </ImageButton>
-                </LinearLayout>
+<!--                    <ImageButton android:src="@drawable/search"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:paddingHorizontal="10dp"-->
+<!--                        android:background="@color/green_panton"-->
+<!--                        android:tint="@color/white">-->
+<!--                    </ImageButton>-->
+<!--                </LinearLayout>-->
             </TableRow>
 
             <TableRow android:weightSum="100">
@@ -130,7 +134,8 @@
                 </LinearLayout>
             </TableRow>
 
-            <TableRow android:weightSum="100"
+            <TableRow android:id="@+id/row_home_team"
+                android:weightSum="100"
                 android:paddingTop="10dp">
                 <TextView android:layout_width="0dp" android:gravity="end"
                     android:text="Home Team:"
@@ -155,7 +160,8 @@
                 </LinearLayout>
             </TableRow>
 
-            <TableRow android:weightSum="100"
+            <TableRow android:id="@+id/row_home_team_score"
+                android:weightSum="100"
                 android:paddingTop="10dp">
                 <TextView android:layout_width="0dp"
                     android:gravity="end"
@@ -167,7 +173,8 @@
                     android:layout_weight="@integer/ins_form_row_2"/>
             </TableRow>
 
-            <TableRow android:weightSum="100"
+            <TableRow android:id="@+id/row_visitors"
+                android:weightSum="100"
                 android:paddingTop="10dp">
                 <TextView android:layout_width="0dp" android:gravity="end"
                     android:text="Visitors:"
@@ -192,7 +199,8 @@
                 </LinearLayout>
             </TableRow>
 
-            <TableRow android:weightSum="100"
+            <TableRow android:id="@+id/row_visitors_score"
+                android:weightSum="100"
                 android:paddingTop="10dp">
 
                 <TextView android:layout_width="0dp"

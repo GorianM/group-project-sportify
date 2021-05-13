@@ -38,13 +38,24 @@ public class InsertMatchViewModel extends ViewModel
         return this.localDAO.getAllSports();
     }
 
+
+    public Sport getSportById(int sportId) {
+        ArrayList<Sport> sports = this.localDAO.getAllSports();
+        Sport result = sports.stream().filter(
+                sport -> sport.getId() == sportId
+        ).findFirst(
+        ).orElse(null);
+
+        return result;
+    }
+
     public ArrayList<Team> getTeamsBySportAndSex(char sex, int sportId)
     {
         ArrayList<Team> teams = this.localDAO.getAllTeams();
         ArrayList<Team> result = new ArrayList<>(
                 teams.stream().filter(
                         team -> {
-                            return team.getSex() == sex && team.getSportId() == sportId;
+                            return (sex == 'A' || team.getSex() == sex) && team.getSportId() == sportId;
                         }
                 ).collect(Collectors.toList())
         );
@@ -58,7 +69,7 @@ public class InsertMatchViewModel extends ViewModel
         ArrayList<Athlete> result = new ArrayList<>(
                 athletes.stream().filter(
                         athlete -> {
-                            return athlete.getSex() == sex && athlete.getSportId() == sportId;
+                            return (sex == 'A' || athlete.getSex() == sex) && athlete.getSportId() == sportId;
                         }
                 ).collect(Collectors.toList())
         );

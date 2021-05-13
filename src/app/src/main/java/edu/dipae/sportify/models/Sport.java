@@ -12,7 +12,7 @@ public class Sport
     public Sport() {
     }
 
-    public Sport(int id, String name, boolean teamSport, int participants, char gender) {
+    public Sport(int id, String name, boolean teamSport, int participants, char sex) {
         this.id = id;
         this.name = name;
         this.teamSport = teamSport;
