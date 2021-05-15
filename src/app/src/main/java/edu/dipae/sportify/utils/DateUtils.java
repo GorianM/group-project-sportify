@@ -16,4 +16,16 @@ public class DateUtils
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         return sdf.format(date);
     }
+
+    public static String dateTimeToString(Date date)
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY HH:mm");
+        return sdf.format(date);
+    }
+
+    public static String shortDateTime(Date date)
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM HH:mm");
+        return sdf.format(date);
+    }
 }

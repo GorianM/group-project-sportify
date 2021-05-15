@@ -1,12 +1,11 @@
-package edu.dipae.sportify.ui.insertmatch;
-
-import android.view.View;
+package edu.dipae.sportify.ui.managematch;
 
 import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
 import edu.dipae.sportify.dao.LocalDAO;
@@ -18,20 +17,20 @@ import edu.dipae.sportify.models.Sport;
 import edu.dipae.sportify.models.Team;
 import edu.dipae.sportify.models.TeamResults;
 
-public class InsertMatchViewModel extends ViewModel
+public class ManageMatchViewModel extends ViewModel
 {
     private RemoteDAO remoteDAO;
     private LocalDAO localDAO;
-    private Match newMatch;
+    private Match selectedMatch;
 
-    public InsertMatchViewModel()
+    public ManageMatchViewModel()
     {
         this.remoteDAO = new RemoteDAO();
         this.localDAO = new LocalDAO();
 
-        this.newMatch = new Match();
+        this.selectedMatch = new Match();
         Calendar c = Calendar.getInstance();
-        this.newMatch.setDate(c.getTime());
+        this.selectedMatch.setDate(c.getTime());
     }
 
     public ArrayList<Sport> getAllSports(){
@@ -79,28 +78,48 @@ public class InsertMatchViewModel extends ViewModel
 
     public Date getMatchDate()
     {
-        return this.newMatch.getDate();
+        return this.selectedMatch.getDate();
     }
 
     public Match setMatchDate(Date matchDate)
     {
-        this.newMatch.setDate(matchDate);
-        return this.newMatch;
+        this.selectedMatch.setDate(matchDate);
+        return this.selectedMatch;
     }
 
-    public Match set(String city, String country, String sportId, ArrayList<AthleteResults> athleteScores, TeamResults teamResults)
+    public Match save(String city, String country, int sportId, ArrayList<AthleteResults> athleteScores, TeamResults teamResults) throws Exception
     {
         // The id will be generated automatically
         // The date is already updated
-        newMatch.setCity(city);
-        newMatch.setCountry(country);
-        newMatch.setSportId(sportId);
+        selectedMatch.setCity(city);
+        selectedMatch.setCountry(country);
+        selectedMatch.setSportId(sportId);
 
-        newMatch.setAthleteScores(athleteScores);
-        newMatch.setTeamResults(teamResults);
+        selectedMatch.setAthleteScores(athleteScores);
+        selectedMatch.setTeamResults(teamResults);
 
-        remoteDAO.insertMatch(newMatch);
+        if(selectedMatch.getId() != null )
+        {
+            remoteDAO.updateMatch(selectedMatch);
+        }
+        else
+        {
+            remoteDAO.insertMatch(selectedMatch);
+        }
 
-        return newMatch;
+        return selectedMatch;
+    }
+
+    public Match retrieveMatch(String matchId) throws ExecutionException, InterruptedException {
+        this.selectedMatch = remoteDAO.getMatchById(matchId);
+        return this.selectedMatch;
+    }
+
+    public int getSportId() {
+        return this.selectedMatch.getSportId();
+    }
+
+    public Match getMatch() {
+        return this.selectedMatch;
     }
 }

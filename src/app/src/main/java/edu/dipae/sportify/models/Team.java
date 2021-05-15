@@ -14,7 +14,7 @@ public class Team
     public Team() {
     }
 
-    public Team(int id, String name, String stadiumName, String city, String country, int sportId, char gender, int yearOfFounding) {
+    public Team(int id, String name, String stadiumName, String city, String country, int sportId, char sex, int yearOfFounding) {
         this.id = id;
         this.name = name;
         this.stadiumName = stadiumName;

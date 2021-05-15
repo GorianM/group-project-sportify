@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class Match
 {
-    private int id;
+    private String id;
     private Date date;
     private String city;
     private String country;
-    private String sportId;
+    private int sportId;
 
     private TeamResults teamResults;
     private ArrayList<AthleteResults> athleteScores;
@@ -16,7 +16,7 @@ public class Match
     public Match() {
     }
 
-    public Match(int id, Date date, String city, String country, String sportId, TeamResults teamResults, ArrayList<AthleteResults> athleteScores) {
+    public Match(String id, Date date, String city, String country, int sportId, TeamResults teamResults, ArrayList<AthleteResults> athleteScores) {
         this.id = id;
         this.date = date;
         this.city = city;
@@ -26,11 +26,11 @@ public class Match
         this.athleteScores = athleteScores;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -58,11 +58,11 @@ public class Match
         this.country = country;
     }
 
-    public String getSportId() {
+    public int getSportId() {
         return sportId;
     }
 
-    public void setSportId(String sportId) {
+    public void setSportId(int sportId) {
         this.sportId = sportId;
     }
 

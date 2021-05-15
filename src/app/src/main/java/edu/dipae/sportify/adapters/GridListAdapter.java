@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import edu.dipae.sportify.R;
+
 public class GridListAdapter extends BaseAdapter
 {
     public static final int CELL_ALIGNMENT_DEFAULT = 0;
@@ -79,6 +81,22 @@ public class GridListAdapter extends BaseAdapter
             {
                 textView.setMaxLines(2);
                 textView.setMinLines(2);
+            }
+
+            if(position == 0) {
+                textView.setBackgroundColor(Color.argb(255,254, 228, 0));
+            } else if(position % 2 == 0) {
+                if ( i % 2 == 0) {
+                    textView.setBackgroundColor(Color.argb(255,230, 237, 220));
+                } else {
+                    textView.setBackgroundColor(Color.argb(255,238, 239, 215));
+                }
+            } else {
+                if ( i % 2 == 0) {
+                    textView.setBackgroundColor(Color.argb(255,188, 208, 159));
+                } else {
+                    textView.setBackgroundColor(Color.argb(255,211, 215, 141));
+                }
             }
 
 //            if( i == 0) {

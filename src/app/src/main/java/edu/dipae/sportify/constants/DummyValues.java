@@ -12,11 +12,11 @@ public class DummyValues
     public static ArrayList<Sport> sports = new ArrayList<>(
             Arrays.asList(
                     new Sport(1, "Football (M)", true, 0, 'M'),
-                    new Sport(2, "Football (F)", true, 0, 'F'),
+                    new Sport(2, "Football (W)", true, 0, 'F'),
                     new Sport(3, "Basketball (M)", true, 0, 'M'),
-                    new Sport(4, "Basketball (F)", true, 0, 'F'),
+                    new Sport(4, "Basketball (W)", true, 0, 'F'),
                     new Sport(5, "Sprint (M)", false, 8, 'M'),
-                    new Sport(6, "Sprint (F)", false, 8, 'F'),
+                    new Sport(6, "Sprint (W)", false, 8, 'F'),
                     new Sport(7, "Chess", false, 2, 'A')
             )
     );
@@ -53,7 +53,7 @@ public class DummyValues
                     new Athlete(25, "Ana", "Teresa", "La Cruz", "Venezuela", 6, 'F', 2000),
                     new Athlete(26, "Elizabeth", "Fernanda", "La Cruz", "Venezuela", 6, 'F', 1991),
                     new Athlete(27, "Laura", "Velez", "Colonia Tovar", "Venezuela", 6, 'F', 1992),
-                    new Athlete(28, "Laura", "Jose", "Colonia Tovar", "Venezuela", 6, 'F', 2001),
+                    new Athlete(28, "Laura", "Jose", "Colonia Tovar", "Venezuela", 6, 'F', 2001)
 
             )
     );

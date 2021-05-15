@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_nav_home_to_insertMatchFragment"
-            app:destination="@id/insertMatchFragment" />
+            app:destination="@id/frg_manage_match" />
     </fragment>
 
     <fragment
@@ -26,10 +26,28 @@
         android:name="edu.dipae.sportify.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
     <fragment
-        android:id="@+id/insertMatchFragment"
-        android:name="edu.dipae.sportify.ui.insertmatch.InsertMatchFragment"
-        android:label="fragment_insert_match"
-        tools:layout="@layout/fragment_insert_match" />
+        android:id="@+id/frg_manage_match"
+        android:name="edu.dipae.sportify.ui.managematch.ManageMatchFragment"
+        android:label="Manage Match"
+        tools:layout="@layout/fragment_manage_match">
+        <action
+            android:id="@+id/action_insertMatchFragment_to_matchesFragment"
+            app:destination="@id/frg_matches"
+            app:popUpTo="@id/frg_matches"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frg_matches"
+        android:name="edu.dipae.sportify.ui.matches.MatchesFragment"
+        android:label="matches"
+        tools:layout="@layout/matches" >
+        <action
+            android:id="@+id/action_matchesFragment_to_insertMatchFragment"
+            app:destination="@id/frg_manage_match">
+            <argument android:name="matchId" app:argType="string"/>
+        </action>
+    </fragment>
 
 </navigation>

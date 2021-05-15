@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <Button android:id="@+id/btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View"
+        app:icon="@drawable/visibility"
+        app:iconGravity="textStart"/>
+
+    <Button android:id="@+id/btn_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        app:icon="@drawable/edit"
+        app:iconGravity="textStart"/>
+
+    <Button android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/delete"
+        app:iconGravity="textStart"
+        android:backgroundTint="@color/rose_madder"
+        android:text="Delete"/>
+
+    <Button android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/cancel"
+        app:iconGravity="textStart"
+        android:backgroundTint="@color/cadet"
+        android:text="Cancel"/>
+
+</LinearLayout>
